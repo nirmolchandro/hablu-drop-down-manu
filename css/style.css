@@ -1,0 +1,302 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1280px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color:  #52be80;
+    padding: 15px 0;
+}
+.manu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo h1{
+    font-size: 35px;
+    line-height: 30px;
+    color: #f1f1f1;
+    text-transform: capitalize;
+}
+ul{
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+ul > li{
+    list-style: none;
+    float: left;
+    background-color: #bfc9ca;
+
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 10px;
+    transition: 0.5s;
+    
+}
+ul > li:hover{
+    background-color: #f1f1f1;
+    color: black;
+}
+ul > li > a{
+    color: #000;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 18px;
+    display: inline-block;
+    width: 100%;
+}
+ul li ul{
+    position: absolute;
+    opacity: 0;
+    visibility: none;
+    transition: 1s;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+ul li ul li{
+    clear: both;
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+    margin: 5px 0;
+}
+ul li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* .container{
+    border: 1px solid #000;
+} */
+.hero-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid #000; */
+    margin-top: 70px;
+}
+
+
+.contant-text{
+    width: 640px;
+}
+.contant-text h3{
+   text-transform: capitalize;
+   font-size: 30px;
+   font-weight: 600;
+}
+.contant-text h1{
+   text-transform: capitalize;
+   font-size: 60px;
+   font-weight: 700;
+   line-height: 60px;
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 20px 0;
+}
+.contant-text p{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.img-box{
+    width: 640px;
+}
+.img-box img{
+    width: 50%;
+    float: right;
+}
+
+/* ******************** */
+
+.text-animation {
+    font-size: 30px; /* ফন্ট সাইজ */
+    font-weight: 600;
+    white-space: nowrap; /* টেক্সট এক লাইনে থাকবে */
+    overflow: hidden; /* অতিরিক্ত অংশ লুকানো থাকবে */
+    border-right: 2px solid black; /* কার্সার স্টাইল */
+    animation: typing 4s steps(19, end) infinite, blink-caret 0.75s step-end infinite; /* টাইপিং এবং কার্সার ব্লিঙ্কিং */
+    display: inline-block; /* টেক্সটের আকার নির্ধারণ */
+    text-transform: capitalize;
+}
+  
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+      width: 14em; /* পুরো টেক্সট দেখাবে */
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+/* ************************************* */
+
+@media (max-width: 575.98px) { 
+    
+ }
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .container{
+        width: 990px;
+        padding: 0 20px;
+    }
+ }
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .container{
+        width: 768px;
+        padding: 0 20px;
+    }
+    ul > li{
+
+        margin: 0 5px;
+        
+    }
+    ul > li > a{
+        color: #286bcf;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 6px 12px;
+        
+    }
+    /* ****************************************** */
+
+    .hero-container{
+        margin-top: 50px;
+        flex-direction: column;
+    }
+    
+    .hearo-area{
+        margin-top: 50px;
+    }
+    .contant-text{
+        /* width: 384px; */
+        order: 1;
+    }
+    .contant-text h3{
+       font-size: 25px;
+       font-weight: 500;
+    }
+    .contant-text h1{
+       font-size: 45px;
+       font-weight: 600;
+       line-height: 50px;
+       margin: 17px 0;
+    }
+    .contant-text p{
+        margin-top: 10px;
+    }
+    .img-box{
+        /* width: 384px; */
+        order: 2;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .img-box img{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .text-animation {
+        font-size: 25px; /* ফন্ট সাইজ */
+        font-weight: 600; 
+        
+    }
+
+
+
+
+
+
+
+
+
+
+ }
+
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .container{
+        width: 990px;
+        padding: 0 30px;
+    }
+    ul > li{
+
+        margin: 0 5px;
+        
+    }
+    ul > li > a{
+        color: #eb2020;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 16px;
+        
+    }
+    /* *************************** */
+    .hero-container{
+        margin-top: 50px;
+    }
+    
+    
+    .contant-text{
+        width: 495px;
+    }
+    .contant-text h3{
+       font-size: 25px;
+       font-weight: 500;
+    }
+    .contant-text h1{
+       font-size: 45px;
+       font-weight: 600;
+       line-height: 50px;
+       margin: 17px 0;
+    }
+    .contant-text p{
+        margin-top: 10px;
+    }
+    .img-box{
+        width: 495px;
+    }
+    .img-box img{
+        width: 50%;
+        float: right;
+    }
+    .text-animation {
+        font-size: 25px; /* ফন্ট সাইজ */
+        font-weight: 600; 
+        
+    }
+ }
+
+
+
+@media (min-width: 1200px) { 
+    
+ }
+
+
+
